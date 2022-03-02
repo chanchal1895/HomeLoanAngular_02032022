@@ -1,0 +1,67 @@
+<section>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="form-group">
+        <label class="col-form-label">First Name </label>
+        <input id="firstname" name="firstname" type="text" class="form-control" formControlName="firstname"
+          placeholder="First Name">
+        <div>
+          <small *ngIf="firstname.invalid && firstname.touched && !firstname.errors?.minlength" class="text-danger">Name
+            is required.
+          </small>
+          <small *ngIf="firstname.touched && firstname.errors?.minlength" class="text-danger">
+            Name must be at least 5 characters long.</small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label class="col-form-label">Last Name </label>
+        <input id="lastname" name="lastname" type="text" class="form-control" formControlName="lastname"
+          placeholder="Last Name">
+        <small
+          *ngIf="contactForm.get('lastname').invalid && contactForm.get('lastname').touched && !lastname.errors?.minlength"
+          class="text-danger">Name
+          is required.</small>
+        <small *ngIf="lastname.touched && lastname.errors?.minlength" class="text-danger">
+          Name must be at least 5 characters long.</small>
+      </div>
+     
+      <div class="form-group">
+        <label class="col-form-label">Email</label>
+        <input id="primaryEmail" name="primaryEmail" type="email" class="form-control" formControlName="primaryEmail"
+          placeholder="Email" />
+        <small
+          *ngIf="contactForm.get('primaryEmail').invalid && contactForm.get('primaryEmail').touched &&  !primaryEmail.errors?.email"
+          class="text-danger">Email is required.</small>
+        <small *ngIf="primaryEmail.touched && primaryEmail.errors?.email" class="text-danger">
+          Enter a valid email.</small>
+      </div>
+  
+      <div class="form-group">
+        <label class="col-form-label">Subject</label>
+        <input id="subject" name="subject" type="text" class="form-control" formControlName="subject"
+          placeholder="Subject">
+        <small
+          *ngIf="contactForm.get('subject').invalid && contactForm.get('subject').touched && !subject.errors?.minlength"
+          class="text-danger">Name
+          is required.</small>
+        <small *ngIf="lastname.touched && subject.errors?.minlength" class="text-danger">
+          Name must be at least 5 characters long.</small>
+      </div>
+  
+      <div class="form-group">
+        <label class="col-form-label">Message</label>
+        <input id="message" name="message" type="text" class="form-control" formControlName="message"
+          placeholder="Message">
+        <small
+          *ngIf="contactForm.get('message').invalid && contactForm.get('message').touched && !message.errors?.minlength"
+          class="text-danger">Name
+          is required.</small>
+        <small *ngIf="message.touched && message.errors?.minlength" class="text-danger">
+          Name must be at least 5 characters long.</small>
+      </div>
+      <button
+        style="margin-top:30px;border: 1.5px solid;background-color: rgb(245, 167, 94); border-color: rgb(248, 122, 3);"
+        type="submit" class="btn btn-success">Submit</button>
+  
+    </form>
+  </section>

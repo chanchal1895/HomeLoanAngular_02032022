@@ -1,0 +1,33 @@
+{
+  "user": [
+    {
+      "id": 2,
+      "firstName": "Rashmi",
+      "lastName": "Pawaskar",
+      "email": "rashmi@gmail.com"
+    },
+    {
+      "id": 9,
+      "firstname": "pratham",
+      "lastname": "kaslikar",
+      "primaryEmail": "prathamkaslikar123@gmail.com",
+      "gender": "M",
+      "mobileNo": "9890098765",
+      "currentLoc": "nagpur",
+      "loanAmount": "6700000"
+    },
+    {
+      "id": 10,
+      "firstname": "rohit",
+      "lastname": "joshi",
+      "primaryEmail": "rohit@gmail.com",
+      "gender": "M",
+      "mobileNo": "7878787878",
+      "currentLoc": "",
+      "loanAmount": "4500000",
+      "country": "India",
+      "state": "Chhattisgarh",
+      "loanTenure": "10"
+    }
+  ]
+}
