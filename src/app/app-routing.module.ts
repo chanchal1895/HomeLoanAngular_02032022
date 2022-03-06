@@ -28,7 +28,8 @@ const routes: Routes = [
   {path: 'userLogin', component:UserLoginComponent},
   {path: 'adminLogin', component:AdminLoginComponent},
   {path: 'afterUserLogin', component:AfterUserLoginComponent},
-  {path: 'afterAdminLogin', component:AfterAdminLoginComponent}
+  {path: 'afterAdminLogin', component:AfterAdminLoginComponent},
+  { path: '',     component: HomePageComponent}
 ];
 
 @NgModule({

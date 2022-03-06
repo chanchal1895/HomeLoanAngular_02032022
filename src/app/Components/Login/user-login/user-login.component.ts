@@ -17,7 +17,7 @@ export class UserLoginComponent implements OnInit {
     this.userLoginForm = this.formBuilder.group({
       primaryEmail: ['', Validators.required],
       password: ['', Validators.required],
-      formName:['Login']
+      formName: ['Login']
     })
   }
   get primaryEmail() {
@@ -32,9 +32,14 @@ export class UserLoginComponent implements OnInit {
     this.userloginServ.validateUser(this.userLoginForm.value)
       .subscribe(data => {
         console.log(data)
-        if (data == 0) { alert("success")
-        this.router.navigate(['afterUserLogin']);   }
-        else { alert("Username or Passord invalid") }        
+        if (data == 1) { alert("Username or Passord invalid") }
+
+        else {
+          this.router.navigate(['afterUserLogin']);
+          console.log( JSON.stringify(data))
+          localStorage.setItem('userResId', JSON.stringify(data))
+        }
+
       });
   }
 

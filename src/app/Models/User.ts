@@ -1,4 +1,5 @@
 export class User {
+    userResId:number=0
     firstname: string = "";
     lastname: string = "";
     gender: string = "";
@@ -10,10 +11,12 @@ export class User {
     loanTenure: number = 0;
     password: string="";
     formName: string="";
+    loanTypeId:number =0;
 
-    constructor(firstname: string, lastname: string, gender: string, email: string, mobileNum: number, currentLoc: string, loanAmt: number
-                ,country: string,state: string, loanTenure:number, password:string, formName:string) {
+    constructor(userResId:number ,firstname: string, lastname: string, gender: string, email: string, mobileNum: number, currentLoc: string, loanAmt: number
+                ,country: string,state: string, loanTenure:number, password:string, formName:string, loanTypeId:number) {
         this.firstname = firstname;
+        this.userResId=userResId;
         this.lastname = lastname;
         this.gender = gender;
         this.email = email;
@@ -24,6 +27,7 @@ export class User {
         this.loanTenure =  loanTenure;
         this.password = password;
         this.formName = formName;
+        this.loanTypeId = loanTypeId;
     }
 
 }

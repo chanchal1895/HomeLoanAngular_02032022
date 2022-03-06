@@ -1,125 +1,185 @@
 <section>
-  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
-    <div class="form-group">
-      <label class="col-form-label">First Name </label>
-      <input id="firstname" name="firstname" type="text" class="form-control" formControlName="firstname"
-        placeholder="First Name">
-      <div>
-        <small *ngIf="firstname.invalid && firstname.touched && !firstname.errors?.minlength" class="text-danger">Name
-          is required.
-        </small>
-        <small *ngIf="firstname.touched && firstname.errors?.minlength" class="text-danger">
-          Name must be at least 5 characters long.</small>
+  <div class="py-2 px-2 mb-2 " style=" background-color: rgb(250, 223, 173);">
+    <div class="media d-flex align-items-center">
+      <img src="../../../assets/images/house.jpg" alt="..." width="130" class="  img-thumbnail shadow-sm">
+      <div class="media-body">
+        <h4 class="m-2" style="color:rgb(170, 62, 12);font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-style:italic;">Make "The perfect home for us" happen :)</h4>
+        <h6 class="m-2" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;font-style:italic;">Owning a home is a big decision. A good start can make all the difference, that's why All India Bank offers you home loan at reasonable rates for you to save money and build wealth :)</h6>
+        <!-- <h3 >Register below to avail</h3> -->
       </div>
     </div>
+  </div>
+  <div id="sect1">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <div class="row">
+        <div class="col-md-6" style="margin-top: 5%;">
+          <div class="form-group">
+            <label class="col-form-label" style="margin-left: 40%; ">First Name </label>
+            <input id="firstname" name="firstname" type="text" class="form-control" formControlName="firstname"
+              placeholder="First Name*" style="margin-left: 40%;">
+            <div>
+              <small *ngIf="submitted  && firstname.invalid && firstname.touched && !firstname.errors?.minlength" class="text-danger"
+                style="margin-left: 40%;">Name
+                is required.
+              </small>
+              <small *ngIf="submitted  && firstname.touched && firstname.errors?.minlength" class="text-danger"
+                style="margin-left: 40%;">
+                Name must be at least 5 characters long.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" style="margin-top: 5%;">
+          <div class="form-group">
+            <label class="col-form-label">Last Name </label>
+            <input id="lastname" name="lastname" type="text" class="form-control" formControlName="lastname"
+              placeholder="Last Name*">
+            <small
+              *ngIf="contactForm.get('lastname').invalid && contactForm.get('lastname').touched && !lastname.errors?.minlength"
+              class="text-danger">Name
+              is required.</small>
+            <small *ngIf="lastname.touched && lastname.errors?.minlength" class="text-danger">
+              Name must be at least 5 characters long.</small>
+          </div>
+        </div>
 
-    <div class="form-group">
-      <label class="col-form-label">Last Name </label>
-      <input id="lastname" name="lastname" type="text" class="form-control" formControlName="lastname"
-        placeholder="Last Name">
-      <small
-        *ngIf="contactForm.get('lastname').invalid && contactForm.get('lastname').touched && !lastname.errors?.minlength"
-        class="text-danger">Name
-        is required.</small>
-      <small *ngIf="lastname.touched && lastname.errors?.minlength" class="text-danger">
-        Name must be at least 5 characters long.</small>
-    </div>
-    <div class="form-group">
-      <label class="radioButton">Gender</label>
-      Male <input type="radio" value="M" id="gender" name="gender" class="radio" formControlName="gender">
-      Female <input type="radio" value="F" id="gender" name="gender" class="radio" formControlName="gender">
-      Other <input type="radio" value="O" id="gender" name="gender" class="radio" formControlName="gender">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="col-form-label" style="margin-left: 40%;">Email</label>
+            <input id="primaryEmail" name="primaryEmail" type="email" class="form-control"
+              formControlName="primaryEmail" placeholder="Email*" (keyup)="onChange()" style="margin-left: 40%;" />
+            <small
+              *ngIf="contactForm.get('primaryEmail').invalid && contactForm.get('primaryEmail').touched &&  !primaryEmail.errors?.email"
+              class="text-danger" style="margin-left: 40%;">Email is required.</small>
+            <small *ngIf="primaryEmail.touched && primaryEmail.errors?.email" class="text-danger"
+              style="margin-left: 40%;">
+              Enter a valid email.</small>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="radioButton">Gender</label>
+            Male <input type="radio" value="M" id="gender" name="gender" class="radio" formControlName="gender">
+            Female <input type="radio" value="F" id="gender" name="gender" class="radio" formControlName="gender">
+            Other <input type="radio" value="O" id="gender" name="gender" class="radio" formControlName="gender">
 
-      <small *ngIf="contactForm.get('gender').invalid && contactForm.get('gender').touched" class="text-danger">Select
-        gender</small>
-    </div>
-
-
-    <div class="form-group">
-      <label class="col-form-label">Email</label>
-      <input id="primaryEmail" name="primaryEmail" type="email" class="form-control" formControlName="primaryEmail"
-        placeholder="Email" (keyup)="onChange()"/>
-      <small
-        *ngIf="contactForm.get('primaryEmail').invalid && contactForm.get('primaryEmail').touched &&  !primaryEmail.errors?.email"
-        class="text-danger">Email is required.</small>
-      <small *ngIf="primaryEmail.touched && primaryEmail.errors?.email" class="text-danger">
-        Enter a valid email.</small>
-    </div>
-
-    <div class="form-group">
-      <label class="col-form-label">Mobile Number</label>
-      <input id="mobileNo" name="mobileNo" type="text" class="form-control" formControlName="mobileNo"
-        placeholder="Mobile Number" />
-      <small *ngIf="contactForm.get('mobileNo').invalid && contactForm.get('mobileNo').touched && !mobileNo.errors?.pattern"
-        class="text-danger">Mobile Number is required.</small>
-      <small *ngIf="mobileNo.touched && mobileNo.errors?.pattern" class="text-danger">
-          Enter a valid mobile number.</small>
-    </div>
-
-    <!-- <div class="form-group">
-      <label class="col-form-label">Current Location</label>
-      <input id="currentLoc" name="currentLoc" type="text" class="form-control" formControlName="currentLoc"
-        placeholder="Current Location" />
-      <small *ngIf="contactForm.get('currentLoc').invalid && contactForm.get('currentLoc').touched"
-        class="text-danger">Current Location is required.</small>
-    </div> -->
-
-    <div class="form-group">
-      <label class="col-form-label">Country</label>
-      <select formControlName="country" class="form-control">
-        <option [disabled]="true">----Select country----</option>
-        <!-- <option ></option> -->
-        <option value="India" id="in" selected>India</option>
-        <!-- <option value="{{country.code}}" id="{{country.code}}" *ngFor="let country of countryList">{{country.name}}</option> -->
-      </select>
-      <div *ngIf="contactForm.get('country').touched && contactForm.get('country').invalid" class="text-danger">
-        <div *ngIf="contactForm.get('country').errors.required">Country is required.</div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-form-label">State</label>
-      <select formControlName="state" class="form-control">
-        <option disabled>Select State</option>
-        <option value="{{state}}" id="{{state}}" *ngFor="let state of stateList">{{state}}</option>
-      </select>
-      <div *ngIf="contactForm.get('state').touched && contactForm.get('state').invalid" class="text-danger">
-        <div *ngIf="contactForm.get('state').errors.required">State is required.</div>
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label class="col-form-label">Loan Amount</label>
-      <input id="loanAmt" name="loanAmt" type="text" class="form-control" formControlName="loanAmt"
-        placeholder="Loan Amount" />
-      <small *ngIf="contactForm.get('loanAmt').invalid && contactForm.get('loanAmt').touched && !loanAmt.errors?.maxlength && !loanAmt.errors?.minlength" class="text-danger">Loan
-        Amount is required.</small>
-      <small *ngIf="loanAmt.touched && loanAmt.errors?.maxlength" class="text-danger">
-          Max length is 10 digits.</small>
-      <small *ngIf="loanAmt.touched && loanAmt.errors?.minlength" class="text-danger">
-          Min length is 7 digits.</small>
-      <!-- <small *ngIf="loanAmt.touched && loanAmt.errors?.pattern" class="text-danger">
+            <small *ngIf="contactForm.get('gender').invalid && contactForm.get('gender').touched"
+              class="text-danger">Select
+              gender</small>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="col-form-label" style="margin-left: 40%;">Mobile Number</label>
+            <input id="mobileNo" name="mobileNo" type="text" class="form-control" formControlName="mobileNo"
+              placeholder="Mobile Number*" style="margin-left: 40%;" />
+            <small
+              *ngIf="contactForm.get('mobileNo').invalid && contactForm.get('mobileNo').touched && !mobileNo.errors?.pattern"
+              class="text-danger" style="margin-left: 40%;">Mobile Number is required.</small>
+            <small *ngIf="mobileNo.touched && mobileNo.errors?.pattern" class="text-danger" style="margin-left: 40%;">
+              Enter a valid mobile number.</small>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="col-form-label">Country</label>
+            <select formControlName="country" class="form-control">
+              <option [disabled]="true">----Select country----</option>
+              <!-- <option ></option> -->
+              <option value="India" id="in" selected>India</option>
+              <!-- <option value="{{country.code}}" id="{{country.code}}" *ngFor="let country of countryList">{{country.name}}</option> -->
+            </select>
+            <div *ngIf="contactForm.get('country').touched && contactForm.get('country').invalid" class="text-danger">
+              <div *ngIf="contactForm.get('country').errors.required">Country is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="col-form-label" style="margin-left: 40%;">State</label>
+            <select formControlName="state" class="form-control" style="margin-left: 40%;">
+              <option disabled>Select State</option>
+              <option value="{{state}}" id="{{state}}" *ngFor="let state of stateList">{{state}}</option>
+            </select>
+            <div *ngIf="contactForm.get('state').touched && contactForm.get('state').invalid" class="text-danger">
+              <div *ngIf="contactForm.get('state').errors.required" style="margin-left: 40%;">State is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="col-form-label">Loan Amount</label>
+            <input id="loanAmt" name="loanAmt" type="text" class="form-control" formControlName="loanAmt"
+              placeholder="Loan Amount*" (keyup)="enableEmi()" />
+            <small
+              *ngIf="contactForm.get('loanAmt').invalid && contactForm.get('loanAmt').touched && !loanAmt.errors?.maxlength && !loanAmt.errors?.minlength"
+              class="text-danger">Loan
+              Amount is required.</small>
+            <small *ngIf="loanAmt.touched && loanAmt.errors?.maxlength" class="text-danger">
+              Max length is 10 digits.</small>
+            <small *ngIf="loanAmt.touched && loanAmt.errors?.minlength" class="text-danger">
+              Min length is 7 digits.</small>
+            <!-- <small *ngIf="loanAmt.touched && loanAmt.errors?.pattern" class="text-danger">
           Invalid amount</small> -->
-    </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="col-form-label" style="margin-left: 40%;">Loan Tenure(In years)</label>
+            <input id="loanTenure" name="loanTenure" type="text" class="form-control" formControlName="loanTenure"
+              placeholder="Loan Tenure*" style="margin-left: 40%;" (keyup)="enableEmi()" />
+            <small *ngIf="contactForm.get('loanTenure').invalid && contactForm.get('loanTenure').touched"
+              class="text-danger" style="margin-left: 40%;">Loan Tenure is required.</small>
+          </div>
 
-    <div class="form-group">
-      <label class="col-form-label">Loan Tenure</label>
-      <input id="loanTenure" name="loanTenure" type="text" class="form-control" formControlName="loanTenure"
-        placeholder="Loan Tenure" />
-      <small *ngIf="contactForm.get('loanTenure').invalid && contactForm.get('loanTenure').touched"
-        class="text-danger">Loan Tenure is required.</small>
-    </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="col-form-label">Password</label>
+            <input id="password" name="password" type="password" class="form-control" formControlName="password"
+              placeholder="Password*">
+            <small *ngIf="password.invalid && password.touched" class="text-danger">Password is required.</small>
+          </div>
 
-    <div class="form-group">
-      <label class="col-form-label">Password</label>
-      <input id="password" name="password" type="password" class="form-control" formControlName="password"
-        placeholder="Password">
-      <small *ngIf="password.invalid && password.touched" class="text-danger">Password is required.</small>
-    </div>
+        </div>
+        <!-- background-color:  rgb(15, 115, 209); border-color: rgb(4, 64, 141); -->
+        <div class="col-md-12">
+          <button data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+            aria-controls="collapseExample" style="margin-top:30px;border: 2px solid;
+            background-image: url(../../../assets/images/collapsible.jpg);
+              font-size: larger;
+            color: rgb(255, 255, 255); font-weight: 600; margin-left:20%;" id="emiButton" type="button"
+            class="btn btn-primary emiButton" [disabled]="disabled" (click)="calcuateEmi()">Calculate EMI</button>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body text-danger" style="margin-left: 20%;">
+              <label class="col-form-label">Interest Rate</label>
+              <input id="interestRate" name="interestRate" type="interestRate" value="{{rate}}" class="form-control"
+                disabled>
+              <label class="col-form-label">Loan EMI</label>
+              <input id="loanEmi" name="loanEmi" type="loanEmi" class="form-control" value="{{emi}}" disabled>
+              <label class="col-form-label">Total Interest Payable</label>
+              <input id="totIntPayable" name="totIntPayable" type="totIntPayable" class="form-control"
+                value="{{totIntPayable}}" disabled>
+              <label class="col-form-label">Total Payment</label>
+              <input id="totPayment" name="totPayment" type="totPayment" class="form-control" value="{{payment}}"
+                disabled>
 
-    <button
-      style="margin-top:30px;border: 1.5px solid;background-color: rgb(245, 167, 94); border-color: rgb(248, 122, 3);"
-      type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </div>
+        <!-- <button style="margin-top:30px;border: 2px solid;background-color: rgb(245, 167, 94); 
+        border-color: rgb(255, 125, 4);  font-size: larger;
+        color: black; font-weight: 600; margin-left:20%;" type="button" class="btn btn-success"  (click)="calcuateEmi()">
+        Calculate</button> -->
+        <div class="col-md-12">
 
-  </form>
+          <button style="margin-top:30px;border: 2px solid;background-image: url(../../../assets/images/collapsible.jpg);  font-size: larger;
+      color: rgb(255, 255, 255); font-weight: 600; margin-left:20%;" type="submit" class="btn btn-success">Submit</button>
+      <br>
+      <br>
+      <br>
+      <br>
+        </div>
+      </div>
+    </form>
+  </div>
 </section>

@@ -1,25 +1,20 @@
 .form-control{
-    margin-left: 25%;
-    width: 50%;
+    margin-left: 40%;
+    width: 25%;
+    
    }
    .btn-success{
-       margin-left: 25%;
-    width: 50%;
+    margin-left: 40%;
+    width: 25%;
+    font-weight: 600;
+    font-size: large;  
    }
    .col-form-label{
-    margin-left: 25%;
+    margin-left: 40%;
    }
-   .radioButton{
-       margin-left: 25%;
-       margin-right: 5%;
-       margin-top: 1%;
-       margin-bottom: 1%;
-   }
-   .radio{
-       margin-right: 1%;
-   }
+  
    .text-danger{
-       margin-left: 25%;
+       margin-left: 40%;
    }
    .form-control.ng-touched.ng-invalid{
        border: 2px solid red;
@@ -27,3 +22,18 @@
    .form-control.ng-touched.ng-valid{
        border: 2px solid green;
    }
+   #sect1 {  
+    height:100%;  
+    color: #fff;background-image: url("../../../../assets/images/profilebg.jpg");  
+    background-size: 100%;
+    background-size:cover;
+    padding-top: 3%; 
+} 
+#loginImage{
+    color: #fff
+    
+}
+.text-black{
+    font-weight: 600;
+    font-size: large;  
+}

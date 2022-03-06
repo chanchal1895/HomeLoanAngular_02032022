@@ -1,5 +1,7 @@
-*{
+.background{
     background-color: rgb(250, 223, 173);
+    /* background: url(".../../../../../assets/images/profilebg.jpg") no-repeat transparent;
+    background-size: cover; */
 }
 .accordion button {
     width: 100%;
@@ -9,18 +11,13 @@
 background-color: rgb(151, 205, 253);
 color: black;
 }
-/* .buttonPosition{
-    display: flex;
-} */
+
 .applyBtn{
-background-color: rgb(252, 66, 66);
+/* background-color: rgb(252, 66, 66); */
+background: url(".../../../../../assets/images/bottonbg.jpg") no-repeat transparent;
 color: black;
-/* align-content: center; */
-/* justify-content: center; */
-/* position: fixed; */
-/* margin-left: 300px; */
 position: relative;
-left: 50%;
+left: 42%;
 top: 50%;
 }
 .btn-position{
@@ -28,5 +25,14 @@ top: 50%;
     color: #000;
 }
 .btn-color{
-    background-color: rgb(235, 130, 45);
+    /* background-color: rgb(235, 130, 45); */
+    background: url(".../../../../../assets/images/collapsible.jpg") no-repeat transparent;
+    background-size: cover;
+    font-weight: 600;
+    font-size: larger;
+    font-family:'Times New Roman', Times, serif;
 }
+.active, .btn-color:hover {
+    background-color:rgb(238, 225, 214);
+  }
+  

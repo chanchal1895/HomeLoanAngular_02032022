@@ -1,0 +1,21 @@
+
+.tablebg{
+    background-image: url(../../../../assets/images/collapsible.jpg);
+}
+.bodyStyle{
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blanchedalmond;
+}
+th{
+   padding-top: 2%;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-weight: 700;
+}
+.btn-secondary{
+    width: 421px;
+    height: 50px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}

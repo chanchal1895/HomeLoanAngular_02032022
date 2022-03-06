@@ -23,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AdminLoginComponent,
     AfterUserLoginComponent,
     AfterAdminLoginComponent,
+  
   ],
   imports: [
     BrowserModule,

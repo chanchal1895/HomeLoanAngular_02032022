@@ -1,4 +1,107 @@
-<p>after-user-login works!</p>
+<div class="py-4 px-3 mb-4 " style=" background-color: rgb(250, 223, 173); height: 20px;">
+    <div class="media d-flex align-items-center">
+        <img src="https://seeklogo.com/images/H/home-loan-logo-47AE303918-seeklogo.com.png" alt="..." width="50"
+            class="mr-6 rounded-circle img-thumbnail shadow-sm" height="60">
+        <div class="media-body">
+            <h4 class="m-0" style="padding: 10px;">      HELLO, {{users.firstname | uppercase}} {{users.lastname | uppercase}} !!</h4>
 
-<button style="margin-top:30px;border: 1.5px solid;background-color: rgb(245, 167, 94); border-color: rgb(248, 122, 3);"
-    type="button" class="btn btn-success" routerLink="/userLogin">Back</button>
+        </div>
+    </div>
+</div>
+<section>
+<div class="main">
+    <div class="container">
+        <div class="signup-content"id="sect1">
+            
+            <div class="signup-form" *ngIf="users">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+                    
+                    <h3 class="app">{{applStatus}}</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="father_name">Name :</label>
+                            <input type="text" value="{{users.firstname }} {{users.lastname}}" disabled name="name"
+                                id="name" />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="father_name">Mobile Number</label>
+                            <input id="mobileNo" name="mobileNo" type="number" class="form-control" formControlName="mobileNo"
+                           [(ngModel)]="users.mobileNo" />
+                           
+                           
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email ID</label>
+                        <input type="email" value=" {{users.primaryEmail}} " disabled name="email" id="email" />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Gender</label>
+                            <input type="text" value="{{users.gender}}" disabled name="name"
+                                id="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="father_name">State</label>
+                            <input type="text" value=" {{users.state}}" disabled id="" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="father_name">Loan Type</label>
+                        <input type="text" value="{{users.loanType | uppercase}}" disabled id="" />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Applied for Loan Amount</label>
+                            <input type="text" value="{{users.loanAmt |  currency:'INR'}}" disabled name="name" id="name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="father_name">Interest Rate</label>
+                            <input type="text" value="10%" id="" disabled/>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="father_name">Loan Tenure</label>
+                            <input type="text" value="{{users.loanTenure}} years" disabled id="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Calculated EMI</label>
+                            <input type="text" value=" {{users.loanEMI |  currency:'INR'}}" disabled name="name" id="name" />
+                        </div>
+                       
+                       
+                        
+                    </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="father_name">Interest Payable Amount</label>
+                        <input type="text" value="{{users.totIntPayable |  currency:'INR'}}" disabled id="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="father_name">Total Payment :</label>
+                        <input type="text" value=" {{users.totPayment |  currency:'INR'}}
+                        " disabled id="" />
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="father_name">Status</label>
+                        <input type="text" value="{{users.appStatus}}
+                        " disabled id="" />
+                    </div> -->
+                </div>
+                  
+                  
+                    
+                    <div class="form-submit">
+                        <input type="button" value="payment" class="submit" name="payment" id="payment" />
+                       &nbsp; <input type="submit" value="Update" class="submit" name="submit" id="submit"  />
+                    </div>
+                  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>

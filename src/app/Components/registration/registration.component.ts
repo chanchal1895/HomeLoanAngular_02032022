@@ -18,6 +18,13 @@ export class RegistrationComponent implements OnInit {
   contactForm:any;
   countryList : string[] = [] ;
   stateList : string[] = [] ;
+  disabled: boolean = true;
+  
+  rate:number=0;
+  tenure:any
+  emi:any
+  payment:any
+  totIntPayable:any
   ngOnInit(): void {
 //   let countries = getCountries();
 // console.log(countries);
@@ -81,7 +88,10 @@ get loanTypeId(){
   return this.contactForm.get('loanTypeId');
 }
   onSubmit() {
-   
+    //  this.submitted = true;						
+    //     if(this.contactForm.invalid){						
+    //       return;						
+       // }	
     if(confirm("Are you sure you want register?")){	
     this.contactForm.value.loanTypeId=localStorage.getItem('loanTypeId')
     
@@ -89,7 +99,7 @@ get loanTypeId(){
           .subscribe( data => {
       
           alert("Application has been submitted successfully !!" );      
-            this.router.navigate(['homeloan']);          
+            this.router.navigate(['registrationSuccess']);          
           });
      localStorage.removeItem('loanTypeId')      
       }  
@@ -104,6 +114,52 @@ get loanTypeId(){
       }
               
       });
+    }
+
+    enableEmi(){
+      
+      if(this.contactForm.value.loanTenure == "" || this.contactForm.value.loanAmt == "" || 
+         this.contactForm.value.loanTenure.invalid || this.contactForm.value.loanAmt.invalid){
+        console.log("fail");
+        this.disabled = true;
+      }
+      else{
+       
+        console.log("success");
+        console.log(this.contactForm.value.loanTenure);
+        console.log(this.contactForm.value.loanAmt);
+        this.disabled = false;
+        this.calcuateEmi();
+
+      }
+
+    }
+    calcuateEmi(){
+      
+      if(this.contactForm.value.loanTenure == "" && this.contactForm.value.loanAmt == ""){
+        console.log("fail");
+        alert("Please fill in Loan Tenure and Loan Amount to calculate Emi.");
+      }
+      else{
+       
+        console.log("success");
+        console.log(this.contactForm.value.loanTenure);
+        this.disabled = false;
+
+        //Calculation
+      
+        this.rate = this.rate / (12*100)
+        this.rate = Math.round(this.rate*10000)/10000.0
+        this.tenure = this.contactForm.value.loanTenure * 12
+        this.emi = this.contactForm.value.loanAmt * this.rate * Math.pow(1+this.rate, this.tenure)/(Math.pow(1+this.rate, this.tenure)-1)
+        this.emi = Math.round(this.emi*10000)/10000
+        this.payment = this.tenure * this.emi
+        this.payment = Math.round(this.payment * 10000)/10000
+        this.totIntPayable = (this.payment - this.contactForm.value.loanAmt)
+        this.rate=10
+        console.log(this.rate +" "+  this.tenure +" "+this.emi+"  "+this.payment +"  "+ this.totIntPayable)
+      }
+     
     }
 }
 

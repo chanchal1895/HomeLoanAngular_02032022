@@ -13,7 +13,7 @@ import { ConnectionService } from './ConnectionService';
 export class ContactUsComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,private contactService:ContactService, private router: Router) { }
    submitted: boolean = false;
-  contactForm:any;
+  contactForm:any;  
   
   ngOnInit(): void {
 

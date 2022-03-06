@@ -1,33 +1,57 @@
+.emiButton{
+    margin-left: 6%;
+ width: 62%;
+}
+.card-body{
+    width: 62%;
+}
+
 .form-control{
- margin-left: 25%;
- width: 50%;
+ margin-left: 5%;
+ width: 60%;
 }
 .btn-success{
-    margin-left: 25%;
- width: 50%;
+    margin-left: 6%;
+ width: 62%;
 }
 .col-form-label{
- margin-left: 25%;
+ margin-left: 5%;
+ font-size: large;
+ color: rgb(0, 0, 0);
+ font-weight: 500;
+ 
 }
 .radioButton{
-    margin-left: 25%;
-    margin-right: 5%;
-    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 4%;
+    margin-top: 5%;
     margin-bottom: 1%;
+    font-size: large;
+    color: rgb(255, 255, 255);
+ font-weight: 500;
 }
 .radio{
-    margin-right: 1%;
+    margin-left: 1%;
+    color: black;
+
 }
 .text-danger{
-    margin-left: 25%;
-
+    margin-left: 5%;
 }
 .danger{
     color: red;
 }
 .form-control.ng-touched.ng-invalid{
-    border: 2px solid red;
+    border: 2px solid rgb(240, 90, 90);
 }
 .form-control.ng-touched.ng-valid{
     border: 2px solid green;
 }
+#sect1 {  
+    height:100%;  
+    color: #fff;
+    background-image: url("../../../assets/images/regbg1.jpg");
+    background-size: 100%;
+    background-size:cover; 
+   
+} 

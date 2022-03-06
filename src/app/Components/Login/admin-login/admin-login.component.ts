@@ -15,7 +15,6 @@ export class AdminLoginComponent implements OnInit {
   adminLoginForm: any;
   ngOnInit(): void {
     this.adminLoginForm = this.formBuilder.group({
-      id: [],
       primaryEmail: ['', Validators.required],
       password: ['',Validators.required],
       formName: ['Admin']
