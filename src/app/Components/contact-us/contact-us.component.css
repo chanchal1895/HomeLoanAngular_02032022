@@ -31,3 +31,8 @@
    .form-control.ng-touched.ng-valid{
        border: 2px solid green;
    }
+   label{
+       font-family: 'Times New Roman', Times, serif;
+       font-weight: 400;
+       font-size: 18px;
+   }

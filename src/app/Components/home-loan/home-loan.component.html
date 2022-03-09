@@ -2,13 +2,79 @@
   <div class="media d-flex align-items-center">
     <img src="../../../assets/images/house.jpg" alt="..." width="130" class="  img-thumbnail shadow-sm">
     <div class="media-body">
-      <h4 class="m-2" style="color:rgb(170, 62, 12);font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-style:italic;">Make "The perfect home for us" happen :)</h4>
-      <h6 class="m-2" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;font-style:italic;">Owning a home is a big decision. A good start can make all the difference, that's why All India Bank offers you home loan at reasonable rates for you to save money and build wealth :)</h6>
+      <h4 class="m-2"
+        style="color:rgb(170, 62, 12); font-size:20px;font-family:'Trebuchet MS',  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-style:italic;">
+        Make "The perfect home for us" happen :)</h4>
+      <h6 class="m-2"
+        style="font-size:15px;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;font-style:italic;">
+        Owning a home is a big decision. A good start can make all the difference, that's why All India Bank offers you
+        home loan at reasonable rates for you to save money and build wealth :)</h6>
       <!-- <h3 >Register below to avail</h3> -->
     </div>
   </div>
 </div>
 <section style="margin-top:-47px;">
+  <div class="section white_bg">
+    <div class="inner_container container_space">
+      <div class="row mb-4">
+        <div class="col-sm-15">
+          <div class="section_title">
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 text-center">
+          <a routerLink="/calculator" class="link">
+            <div class="box_card full_width">
+              <span class="icon"> <i class="fas fa-rupee-sign fa-lg white-text mr-md-5 mr-3 fa-2x">
+                </i></span>
+              <div class="caption">
+                <span class="title">
+                  What would be <br>
+                  my EMI?
+                </span>
+              </div>
+              <div class="cta home_loan"> Calculate > </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3 text-center">
+          <a href="/calculator/loan-eligibility-calculator" class="link">
+            <div class="box_card full_width">
+              <span class="icon borrow"><i class="fas fa-percent fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+              </span>
+              <a class="fb-ic">
+
+              </a>
+              <div class="caption">
+                <span class="title">
+                  How much loan <br>
+                  can I borrow?
+                </span>
+              </div>
+              <div class="cta home_loan">Calculate > </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-4 mb-3 text-center">
+          <a href="/calculator/loan-eligibility-calculator" class="link">
+            <div class="box_card full_width">
+              <span class="icon refinancing"><i class="fas fa-solid fa-clock fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
+              </span>
+              <div class="caption">
+                <span class="title">
+                  Want a quick loan sanction?
+                </span>
+              </div>
+              <div class="cta home_loan">Quick Apply > </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container mt-5 background">
     <div class="row">
       <div class="col-sm-12">
@@ -17,9 +83,9 @@
             <br />
             <button type="button" class="btn btn-primary btn-lg btn-block btn-position btn-color" data-toggle="collapse"
               data-target="#collapsible-1" onclick="localStorage.setItem('loanTypeId', 1)">
-              <span class="" ></span>Salaried employees<span class="indicator"></span>
+              <span class=""></span>Salaried employees<span class="indicator"></span>
             </button>
-            
+
             <div id="collapsible-1" data-parent="#myAccordion" class="collapse" style="margin: 50px;">
               <div class="container">
                 <div class="row">
@@ -48,11 +114,20 @@
                   </div>
                   <div class="col-sm">
                     <h4>Home Loan Documents</h4>
+                    <ul class="list">
+                      <li>Adhaar Card</li>
+                      <li>Pan Card</li>
+                      <li>Income Certificate</li>
+                      <li>Address Proof</li>
+                      <li>Bank statement for last 3 months</li>
+                      <li>Electricity Bill</li>
+                      <li>Voter ID</li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
-             
+
               <div>
                 <button type="button" class="applyBtn  btn-lg col-md-12 " routerLink="/registration" style="width:20%">
                   Apply
@@ -64,11 +139,11 @@
 
             <button type="button" class="btn btn-primary btn-lg btn-block mb-1 btn-color" data-toggle="collapse"
               data-target="#collapsible-2" onclick="localStorage.setItem('loanTypeId', 2)">
-              <span class="text-center"></span>Self-employed individuals:<span class="indicator"></span>
+              <span class="text-center"></span>Self-employed individuals<span class="indicator"></span>
             </button>
 
             <div id="collapsible-2" data-parent="#myAccordion" class="collapse">
-             
+
               <div class="container">
                 <div class="row">
                   <div class="col-sm">
@@ -95,11 +170,20 @@
                   </div>
                   <div class="col-sm">
                     <h4>Home Loan Documents</h4>
+                    <ul class="list">
+                      <li>Adhaar Card</li>
+                      <li>Pan Card</li>
+                      <li>Income Certificate</li>
+                      <li>Address Proof</li>
+                      <li>Bank statement for last 3 months</li>
+                      <li>Electricity Bill</li>
+                      <li>Voter ID</li>
+                    </ul>
                   </div>
                 </div>
               </div>
 
-              <button type="button" class="applyBtn btn-secondary btn-lg" style="width:20%">
+              <button type="button" class="applyBtn  btn-lg col-md-12 " routerLink="/registration" style="width:20%">
                 Apply
               </button>
             </div>
@@ -108,29 +192,55 @@
               data-target="#collapsible-3" onclick="localStorage.setItem('loanTypeId', 3)">
               <span class="text-center"></span>Pradhan Mantri Awas Yojana<span class="indicator"></span>
             </button>
-
             <div id="collapsible-3" data-parent="#myAccordion" class="collapse">
-              <div class="accord_content">
-                <h4>Age</h4>
-                <p>23 years - 70 years</p>
-                <h4>Employment</h4>
-                <ul class="list">
-                  <li>
-                    The Pradhan Mantri Awas Yojana (PMAY) allows eligible
-                    first-time home owners to claim subsidies against the
-                    purchase of their first property subject to its norms. If
-                    you dream of owning a home via PMAY and have applied for a
-                    home loan with Piramal Capital & Housing Finance then our
-                    team of experts can help you through every stage of the
-                    application process.
-                  </li>
-                  <li>***</li>
-                </ul>
-                <button type="button" class="applyBtn btn-secondary btn-lg" style="width:20%">
-                  Apply
-                </button>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <h4>Age</h4>
+                    <ul class="list">
+                      <li>23 years - 70 years</li>
+                      <li>
+                        Self-employed professionals (doctors, architects, etc)
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm">
+                    <h4>Employment</h4>
+                    <p>Individuals working under the following can apply:</p>
+                    <ul class="list">
+                      <li>
+                        The Pradhan Mantri Awas Yojana (PMAY) allows eligible
+                        first-time home owners to claim subsidies against the
+                        purchase of their first property subject to its norms. If
+                        you dream of owning a home via PMAY and have applied for a
+                        home loan with Piramal Capital & Housing Finance then our
+                        team of experts can help you through every stage of the
+                        application process.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm">
+                    <h4>Home Loan Documents</h4>
+                    <ul class="list">
+                      <li>Adhaar Card</li>
+                      <li>Pan Card</li>
+                      <li>Income Certificate</li>
+                      <li>Address Proof</li>
+                      <li>Bank statement for last 3 months</li>
+                      <li>Electricity Bill</li>
+                      <li>Voter ID</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
+
+
+              <button type="button" class="applyBtn  btn-lg col-md-12 " routerLink="/registration" style="width:20%">
+                Apply
+              </button>
             </div>
+
             <br>
             <button type="button" class="btn btn-primary btn-lg btn-block btn-color" data-toggle="collapse"
               data-target="#collapsible-4" onclick="localStorage.setItem('loanTypeId', 4)">
@@ -138,31 +248,54 @@
             </button>
 
             <div id="collapsible-4" data-parent="#myAccordion" class="collapse">
-              <div class="accord_content">
-                <h4>Age</h4>
-                <ul class="list">
-                  <li>21 years to 70 years</li>
-                  <li>
-                    NOTE: This home loan can be availed only till an individual
-                    remains an income contributor.
-                  </li>
-                </ul>
-                <h4>Employment</h4>
-                <p>Individuals working under the following can apply:</p>
-                <ul class="list">
-                  <li>Government Institution</li>
-                  <li>Private sector</li>
-                  <li>Public sector</li>
-                  <li>MNCs or related companies</li>
-                  <li>Partnership Firms</li>
-                  <li>Proprietorship concern</li>
-                  <li>NGOs or related organisations</li>
-                </ul>
-                <button type="button" class="applyBtn btn-secondary btn-lg" style="width:20%">
-                  Apply
-                </button>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <h4>Age</h4>
+                    <ul class="list">
+                      <li>21 years to 70 years</li>
+                      <li>
+                        NOTE: This home loan can be availed only till an individual
+                        remains an income contributor.
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-sm">
+                    <h4>Employment</h4>
+                    <p>Individuals working under the following can apply:</p>
+                    <ul class="list">
+                      <li>Government Institution</li>
+                      <li>Private sector</li>
+                      <li>Public sector</li>
+                      <li>MNCs or related companies</li>
+                      <li>Partnership Firms</li>
+                      <li>Proprietorship concern</li>
+                      <li>NGOs or related organisations</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm">
+                    <h4>Home Loan Documents</h4>
+                    <ul class="list">
+                      <li>Adhaar Card</li>
+                      <li>Pan Card</li>
+                      <li>Income Certificate</li>
+                      <li>Address Proof</li>
+                      <li>Bank statement for last 3 months</li>
+                      <li>Electricity Bill</li>
+                      <li>Voter ID</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
+
+
+              <button type="button" class="applyBtn  btn-lg col-md-12 " routerLink="/registration" style="width:20%">
+                Apply
+              </button>
             </div>
+
+
             <br />
           </div>
         </div>

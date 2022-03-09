@@ -10,6 +10,7 @@ import { UserLoginService } from 'src/app/Services/user-login.service';
 })
 export class AfterUserLoginComponent implements OnInit {
   data: any;
+  today = new Date();
 
   constructor(private router: Router, 
     private userService: UserLoginService,

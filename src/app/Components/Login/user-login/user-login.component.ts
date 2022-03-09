@@ -13,6 +13,7 @@ export class UserLoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private router: Router, private userloginServ: UserLoginService) { }
 
   userLoginForm: any;
+  authenticate:boolean=false;
   ngOnInit(): void {
     this.userLoginForm = this.formBuilder.group({
       primaryEmail: ['', Validators.required],
@@ -28,19 +29,28 @@ export class UserLoginComponent implements OnInit {
   }
 
   onSubmit() {
-
+   
+    
     this.userloginServ.validateUser(this.userLoginForm.value)
       .subscribe(data => {
         console.log(data)
-        if (data == 1) { alert("Username or Passord invalid") }
+        if (data == 1) { alert("Username or Passord invalid") ;
+        this.authenticate=false;
+        console.log( this.authenticate);
+      
+      }
+    
 
         else {
           this.router.navigate(['afterUserLogin']);
+          this.authenticate=true;
+        console.log( this.authenticate);
           console.log( JSON.stringify(data))
           localStorage.setItem('userResId', JSON.stringify(data))
         }
-
+      
       });
+    
   }
 
 }

@@ -29,13 +29,21 @@ export class AdminLoginComponent implements OnInit {
 
 
   onSubmit() {
+    if (this.adminLoginForm.invalid) {
 
+      alert("Please enter the username and password")
+      console.log("Form Submitted!");
+    }
+    else{
     this.userloginServ.validateUser(this.adminLoginForm.value)
       .subscribe(data => {
         console.log(data)
-        if (data == 0) { alert("success")
+
+        if (data == 0) { 
+          localStorage.setItem('userResId',JSON.stringify(data))
         this.router.navigate(['afterAdminLogin']);   }
         else { alert("Username or Passord invalid") }        
       });
   }
+}
 }

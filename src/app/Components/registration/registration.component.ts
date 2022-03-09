@@ -14,7 +14,6 @@ import { UserLoginService } from 'src/app/Services/user-login.service';
 export class RegistrationComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,private regservice:RegistrationService,private userloginServ: UserLoginService, private router: Router) { }
-   submitted: boolean = false;
   contactForm:any;
   countryList : string[] = [] ;
   stateList : string[] = [] ;
@@ -88,10 +87,13 @@ get loanTypeId(){
   return this.contactForm.get('loanTypeId');
 }
   onSubmit() {
-    //  this.submitted = true;						
-    //     if(this.contactForm.invalid){						
-    //       return;						
-       // }	
+   
+    // if (this.contactForm.invalid) {
+    //   // alert("Mandatory fields are empty.")
+    //   //  return
+    //   // console.log("Form Submitted!");
+    // }
+    
     if(confirm("Are you sure you want register?")){	
     this.contactForm.value.loanTypeId=localStorage.getItem('loanTypeId')
     
@@ -103,6 +105,7 @@ get loanTypeId(){
           });
      localStorage.removeItem('loanTypeId')      
       }  
+    
     }
 
     onChange(){

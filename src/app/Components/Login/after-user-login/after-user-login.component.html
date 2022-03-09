@@ -3,7 +3,7 @@
         <img src="https://seeklogo.com/images/H/home-loan-logo-47AE303918-seeklogo.com.png" alt="..." width="50"
             class="mr-6 rounded-circle img-thumbnail shadow-sm" height="60">
         <div class="media-body">
-            <h4 class="m-0" style="padding: 10px;">      HELLO, {{users.firstname | uppercase}} {{users.lastname | uppercase}} !!</h4>
+            <h4 class="m-0" style="padding: 10px;">      HELLO, {{users.firstname | uppercase}} {{users.lastname | uppercase}} !!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login Time: {{today | date:'dd-MM-yyyy hh:mm:ss a':'+0530'}}</h4>
 
         </div>
     </div>
@@ -12,7 +12,7 @@
 <div class="main">
     <div class="container">
         <div class="signup-content"id="sect1">
-            
+             
             <div class="signup-form" *ngIf="users">
                 <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
                     
@@ -95,10 +95,16 @@
                   
                     
                     <div class="form-submit">
-                        <input type="button" value="payment" class="submit" name="payment" id="payment" />
-                       &nbsp; <input type="submit" value="Update" class="submit" name="submit" id="submit"  />
+                        <input  style="font-weight: bold; background-image: url(../../../../assets/images/bottonbg.jpg);"
+                        type="button" class="btn btn-success" type="button" value="Payment" class="submit" name="payment" id="payment" />
+                       &nbsp; <input  style="font-weight: bold; background-image: url(../../../../assets/images/bottonbg.jpg);"
+                       type="button" class="btn btn-success"type="submit" value="Update" class="submit" name="submit" id="submit"  />
+
                     </div>
-                  
+                    <!-- <button
+                    style="font-weight: bold; margin-top:15px;border: 2px solid;background-image: url(../../../../assets/images/bottonbg.jpg);margin-left: 40%;"
+                    type="button" class="btn btn-success"routerLink="/home">Log out</button>
+                   -->
                 </form>
             </div>
         </div>

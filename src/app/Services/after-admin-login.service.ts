@@ -8,13 +8,15 @@ import { User } from '../Models/User';
 export class AfterAdminLoginService {
   baseUrl:string="http://localhost:8080/userregistration/";
   constructor(private httpSer:HttpClient) { }
+  
 // Get All Users
 
-  public getUsers(){
-
-    console.log("Get All users : "+this.httpSer.get<User[]>(this.baseUrl.concat("userList")));
+  public getUsers(status:string){
+    const params = new HttpParams().set('status', status)
+    console.log(status);
+    console.log("Get All users : "+this.httpSer.get<User[]>(this.baseUrl.concat("userList/"), { params }));
     
-    return this.httpSer.get<User[]>(this.baseUrl.concat("userList"));
+    return this.httpSer.get<User[]>(this.baseUrl.concat("userList/"), { params });
   }
 
   getUserById(id: string) {
@@ -26,19 +28,20 @@ export class AfterAdminLoginService {
 
   }
 
-    // Create User							
-  //   createUser(user: User) {							
-  //     return this.httpSer.post(this.baseUrl, user);							
-  //   }			
-  
-   // Modify User				
-  // updateUser(user: User) {				
-  //       return this.httpSer.put(this.baseUrl + '/' + user.id, user);				
-  //     }	
+  //  Accept form				
+   acceptForm(user: User) {		
+     debugger
+    console.log("Inside service  "+ this.httpSer.post(this.baseUrl.concat("updateUser"), user))
+		// console.log(user.Remarks);
+         return this.httpSer.post(this.baseUrl.concat("updateUser"), user);				
+      }
 
-    // Get User By Id			
-//   getUserById(id: number){			
-//       return this.httpSer.get<User>(this.baseUrl+'/'+id);			
-//     }		
+    //Reject form				
+   rejectForm(user: User) {	
+    console.log("Inside service  "+ this.httpSer.post(this.baseUrl.concat("updateUser"), user))
+			
+        return this.httpSer.post(this.baseUrl.concat("updateUser"), user);				
+     }
+
 
 }

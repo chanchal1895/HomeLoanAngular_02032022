@@ -19,3 +19,20 @@ th{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+.btn-lg:hover{
+color: rgb(8, 8, 8);
+background-color: rgb(175, 173, 170);
+}
+.btn:focus {
+  color:#fff;
+  background-color: rgb(29, 26, 26);
+  border-color: rgb(8, 8, 8);
+}
+.btn-warning1{
+    background-color: rgb(24, 145, 24);
+    color:#fff;
+}
+.btn-warning2{
+    background-color: rgb(209, 45, 45);
+    color:#fff;
+}

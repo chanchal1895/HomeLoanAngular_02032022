@@ -36,3 +36,211 @@ top: 50%;
     background-color:rgb(238, 225, 214);
   }
   
+
+
+
+
+
+
+  
+  .accordion button {
+    width: 100%;
+    display: block;
+  }
+  .btn{
+  background-color: rgb(151, 205, 253);
+  color: black;
+  }
+  /* .buttonPosition{
+    display: flex;
+  } */
+  .applyBtn{
+  background-color: rgb(252, 66, 66);
+  color: black;
+  /* align-content: center; */
+  /* justify-content: center; */
+  /* position: fixed; */
+  /* margin-left: 300px; */
+  position: relative;
+  left: 50%;
+  top: 50%;
+  }
+  .btn-position{
+    margin-top: 100px;
+    color: #000;
+  }
+  .btn-color{
+    background-color: rgb(235, 130, 45);
+  }
+  .link {
+      text-decoration: none !important;
+      font-family: 'gothammedium';
+    }
+    .link small {
+      font-family: 'gothambook';
+    }.container_space {
+      padding-top: 4rem;
+      padding-bottom: 4rem
+    }.container_space {
+      padding-top: 3rem;
+      padding-bottom: 3rem
+    }.container_space {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }.inner_container {
+      width: 90%;
+      max-width: 1060px;
+    }.inner_container {
+      width: 90%;
+      max-width: 1500px;
+      margin: 0 auto
+    }.section_title {
+      text-align: center;
+      width: 100%;
+    }
+    .section_title h2, .section_title h3, .section_title h4, .section_title h5 {
+      font-family: 'gothambold';
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 0;
+    }
+    .section_title h2:after, .section_title h3:after, .section_title h4:after, .section_title h5:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      height: 3px;
+      width: 100px;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: #da4e34;
+    }
+    .section_title .title_icon {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      background-color: #da4e34;
+      border-radius: 50%;
+      font-size: 60px;
+      color: #fff;
+    }
+    .section_title.left {
+      text-align: left;
+    }
+    .section_title.left h2:after, .section_title.left h3:after, .section_title.left h4:after, .section_title.left h5:after {
+      -webkit-transform: none;
+      transform: none;
+      left: 0;
+    }.box_card {
+      border: 1px solid #DBDBDB;
+      border-bottom: 7px solid #243646;
+      padding: 32px;
+      width: 100%;
+      max-width: 350px;
+      min-height: 100%;
+      margin: 0 auto;
+    }
+    .box_card > .icon {
+      display: inline-block;
+      width: 72px;
+      height: 72px;
+      margin-bottom: 20px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      /* background-image: url('/assets/images/icons/rupees.jpg'); */
+      background-size: 200% auto;
+    }
+    .box_card .caption {
+      margin-bottom: 20px
+    }
+    .box_card .title {
+      font-size: 25px;
+      font-family: 'gothambold';
+      color: #20374E;
+      text-align: left;
+      line-height: 1.3;
+      display: inline-block;
+      text-align: center
+    }
+    .box_card .title.lightwaight {
+      font-family: 'gothammedium';
+    }
+    .box_card .numbers {
+      display: inline-block;
+      text-align: center;
+      font-size: 52px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      line-height: 150%;
+      position: relative;
+      margin: 0 auto;
+      margin-left: 3%;
+    }
+    .box_card .numbers sup {
+      position: absolute;
+      left: -13%;
+      top: 24%;
+      font-size: 55%;
+      line-height: 100%;
+      font-weight: normal;
+    }
+    .box_card .numbers sub {
+      position: absolute;
+      font-size: 40%;
+      line-height: 104%;
+      right: 0;
+      font-weight: normal;
+    }
+    .box_card .disc {
+      display: block;
+      width: 100%;
+      padding: 16px 0;
+      font-size: 20px;
+      line-height: 150%;
+    }
+    .box_card .cta {
+      text-transform: uppercase;
+      font-size: 15px;
+      font-family: 'gothammedium';
+    }
+    .box_card .cta .link {
+      color: #20374E;
+      text-decoration: none
+    }
+    .box_card:hover {
+      border-bottom-color: #da4e34;
+      box-shadow: 0px 3px 49px #00000029;
+    }
+    .box_card:hover .title {
+      color: #da4e34;
+    }
+    .box_card:hover .icon {
+      background-position-x: right;
+    }
+    .box_card > .icon.borrow {
+      background-position-y: -86px;
+    }
+    .box_card > .icon.refinancing {
+      background-position-y: -171px;
+    }
+    .box_card > .icon.rewards {
+      background-image: url('/assets/images/icons/rupees.jpg');
+    }.box_card > .icon {
+      width: 62px;
+      height: 62px;
+      margin-bottom: 14px;
+    }
+    .box_card > .icon.borrow {
+      background-position-y: -74px;
+    }
+    .box_card > .icon.refinancing {
+      background-position-y: -149px;
+    } .box_card .numbers {
+      font-size: 38px;
+    }
+    .box_card .disc {
+      padding: 12px 0;
+      font-size: 16px;
+    }

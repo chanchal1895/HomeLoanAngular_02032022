@@ -16,6 +16,7 @@ import { UserLoginComponent } from './Components/Login/user-login/user-login.com
 import { AdminLoginComponent } from './Components/Login/admin-login/admin-login.component';
 import { AfterUserLoginComponent } from './Components/Login/after-user-login/after-user-login.component';
 import { AfterAdminLoginComponent } from './Components/Login/after-admin-login/after-admin-login.component';
+import { RegistrationSucessComponent } from './Components/registration-sucess/registration-sucess.component';
 
 const routes: Routes = [
   {path: 'home', component: HomePageComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'adminLogin', component:AdminLoginComponent},
   {path: 'afterUserLogin', component:AfterUserLoginComponent},
   {path: 'afterAdminLogin', component:AfterAdminLoginComponent},
+  {path: 'registrationSuccess', component:RegistrationSucessComponent},
   { path: '',     component: HomePageComponent}
 ];
 

@@ -1,15 +1,21 @@
+
+
+
 <section>
+
+
   <div class="py-2 px-2 mb-2 " style=" background-color: rgb(250, 223, 173);">
     <div class="media d-flex align-items-center">
       <img src="../../../assets/images/house.jpg" alt="..." width="130" class="  img-thumbnail shadow-sm">
       <div class="media-body">
         <h4 class="m-2" style="color:rgb(170, 62, 12);font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-style:italic;">Make "The perfect home for us" happen :)</h4>
-        <h6 class="m-2" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;font-style:italic;">Owning a home is a big decision. A good start can make all the difference, that's why All India Bank offers you home loan at reasonable rates for you to save money and build wealth :)</h6>
+        <h6 class="m-2" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight: 500;font-size:15px;font-style:italic;">Owning a home is a big decision. A good start can make all the difference, that's why All India Bank offers you home loan at reasonable rates for you to save money and build wealth :)</h6>
         <!-- <h3 >Register below to avail</h3> -->
       </div>
     </div>
   </div>
   <div id="sect1">
+    
     <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="row">
         <div class="col-md-6" style="margin-top: 5%;">
@@ -18,11 +24,11 @@
             <input id="firstname" name="firstname" type="text" class="form-control" formControlName="firstname"
               placeholder="First Name*" style="margin-left: 40%;">
             <div>
-              <small *ngIf="submitted  && firstname.invalid && firstname.touched && !firstname.errors?.minlength" class="text-danger"
+              <small *ngIf="  firstname.invalid && firstname.touched && !firstname.errors?.minlength" class="text-danger"
                 style="margin-left: 40%;">Name
                 is required.
               </small>
-              <small *ngIf="submitted  && firstname.touched && firstname.errors?.minlength" class="text-danger"
+              <small *ngIf=" firstname.touched && firstname.errors?.minlength" class="text-danger"
                 style="margin-left: 40%;">
                 Name must be at least 5 characters long.</small>
             </div>
@@ -58,9 +64,9 @@
         <div class="col-md-6">
           <div class="form-group">
             <label class="radioButton">Gender</label>
-            Male <input type="radio" value="M" id="gender" name="gender" class="radio" formControlName="gender">
-            Female <input type="radio" value="F" id="gender" name="gender" class="radio" formControlName="gender">
-            Other <input type="radio" value="O" id="gender" name="gender" class="radio" formControlName="gender">
+             <input type="radio" value="M" id="gender" name="gender" class="radio" formControlName="gender">Male
+            &nbsp; <input type="radio" value="F" id="gender" name="gender" class="radio" formControlName="gender">Female
+            &nbsp;<input type="radio" value="O" id="gender" name="gender" class="radio" formControlName="gender">Other
 
             <small *ngIf="contactForm.get('gender').invalid && contactForm.get('gender').touched"
               class="text-danger">Select
@@ -152,15 +158,15 @@
           <div class="collapse" id="collapseExample">
             <div class="card card-body text-danger" style="margin-left: 20%;">
               <label class="col-form-label">Interest Rate</label>
-              <input id="interestRate" name="interestRate" type="interestRate" value="{{rate}}" class="form-control"
+              <input id="interestRate" name="interestRate" type="interestRate" value="{{rate}}%" class="form-control"
                 disabled>
               <label class="col-form-label">Loan EMI</label>
-              <input id="loanEmi" name="loanEmi" type="loanEmi" class="form-control" value="{{emi}}" disabled>
+              <input id="loanEmi" name="loanEmi" type="loanEmi" class="form-control" value="{{emi  |  currency:'INR'}}" disabled>
               <label class="col-form-label">Total Interest Payable</label>
               <input id="totIntPayable" name="totIntPayable" type="totIntPayable" class="form-control"
-                value="{{totIntPayable}}" disabled>
+                value="{{totIntPayable  |  currency:'INR'}}" disabled>
               <label class="col-form-label">Total Payment</label>
-              <input id="totPayment" name="totPayment" type="totPayment" class="form-control" value="{{payment}}"
+              <input id="totPayment" name="totPayment" type="totPayment" class="form-control" value="{{payment  |  currency:'INR'}}"
                 disabled>
 
             </div>

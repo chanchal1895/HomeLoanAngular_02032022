@@ -53,5 +53,6 @@
     background-image: url("../../../assets/images/regbg1.jpg");
     background-size: 100%;
     background-size:cover; 
+    overflow-x:hidden ;
    
 } 

@@ -15,3 +15,7 @@ a:hover{
   background-color: aliceblue;
   color: black;
 }
+.mat-button{
+  font-size: 19px;
+  font-family: 'Times New Roman', Times, serif;
+}
